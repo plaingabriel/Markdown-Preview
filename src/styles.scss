@@ -1,0 +1,29 @@
+* {
+    // Global Styles
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    html, body {
+        margin: 0;
+        height: 100%;
+    }
+    // Global Styles
+
+    #preview {
+        width: 700px;
+        height: 65vh;
+        border: 2px solid black;
+
+        /* Make the CSS for the preview elements */
+    }
+
+    #editor-div {
+        width: 500px;
+    }
+
+    #preview, #editor-div {
+        margin: auto;
+        border-radius: 5px;
+    }
+}
