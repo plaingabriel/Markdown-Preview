@@ -3,18 +3,23 @@ import { marked } from "marked"
 
 const Editor = ({ onChange, msg }) => {
     return (
-        <div id="editor-div">
-            <textarea name="editor" id="editor" cols="65" rows="10" onChange={onChange} defaultValue={msg}></textarea>
+        <div id="editor-div" class="border border-primary rounded border-4">
+            <h3 class="p-1 mb-0 text-light text-start bg-primary">Editor</h3>
+            <textarea name="editor" id="editor" cols="64" rows="10" onChange={onChange} defaultValue={msg}></textarea>
         </div>
     )
 }
 
 const Previewer = ({ input }) => {
     return(
-        <div id="preview" className="p-4 text-break overflow-auto" dangerouslySetInnerHTML={{
-            __html: marked(input),
-        }}>
-            {/* Parsing the text */}
+        <div id="previewer" class="mt-4 border border-primary rounded border-4">
+            <h3 class="p-1 mb-0 text-light text-start bg-primary">Previewer</h3>
+            <div id="preview" className="mt-0 bg-light p-4 text-break overflow-auto" dangerouslySetInnerHTML={{
+                __html: marked(input),
+            }}>
+                {/* Parsing the text */}
+
+            </div>            
         </div>
     )
 }
